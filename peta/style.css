@@ -1,0 +1,151 @@
+/* 🎨 Variabel Warna */
+:root {
+  --primary: #004080;
+  --primary-hover: #0066cc;
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #333;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 🌐 Reset & Body */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* 🏷️ Header & Footer */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 16px 20px;
+  text-align: center;
+  border-bottom: 4px solid var(--primary-hover);
+}
+header h1 {
+  font-size: 1.9rem;
+  margin-bottom: 6px;
+}
+header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  margin-top: 32px;
+  font-size: 0.9rem;
+}
+
+/* 📦 Konten Utama */
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 24px;
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+main h2 {
+  margin: 18px 0 10px;
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+
+/* 🔽 Dropdown Tahun */
+select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #cfd8e3;
+  font-size: 15px;
+  cursor: pointer;
+  background: #fff;
+  transition: 0.2s;
+}
+select:hover {
+  border-color: var(--primary-hover);
+}
+
+/* 📄 PDF Viewer */
+iframe {
+  width: 100%;
+  height: 520px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-top: 10px;
+}
+.fallback {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+/* 🔘 Tombol Download */
+.btn-download {
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 12px;
+  transition: background 0.25s;
+}
+.btn-download:hover {
+  background: var(--primary-hover);
+}
+
+/* 🔗 Link Sekunder */
+.link-secondary a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.link-secondary a:hover {
+  text-decoration: underline;
+  color: var(--primary-hover);
+}
+
+/* 🖼️ Logo KKN */
+.logo-kkn {
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+  transition: transform 0.3s;
+}
+.logo-kkn:hover {
+  transform: scale(1.05);
+}
+
+/* 📸 Galeri */
+.galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 12px;
+}
+.foto-kkn {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.foto-kkn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 📱 Responsif */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.6rem; }
+  main { padding: 16px; }
+  iframe { height: 420px; }
+  .galeri { gap: 12px; }
+}

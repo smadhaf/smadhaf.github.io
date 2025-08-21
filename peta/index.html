@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perkembangan Jalan Desa</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon (ikon di tab) -->
+  <link rel="icon" type="image/x-icon" href="assets/logo-kkn-ico.ico" />
+  <script>
+    function loadMap() {
+      const tahun = document.getElementById("tahun").value;
+      const viewer = document.getElementById("pdf-viewer");
+      const downloadBtn = document.getElementById("download-btn");
+
+  
+      const file = `assets/kkn-${tahun}.pdf`;
+      viewer.src = file;
+      downloadBtn.href = file;
+      downloadBtn.download = `kkn-${tahun}.pdf`;
+      downloadBtn.innerText = `⬇️ Download Peta ${tahun}`;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Peta NDVI Perkembangan Vegetasi Desa Tengin Baru</h1>
+    <p>TAHUN 2020 – 2025</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Pilih Tahun Peta</h2>
+      <select id="tahun" onchange="loadMap()">
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+      </select>
+    </section>
+
+    <section>
+      <h2>Peta Jalan Desa</h2>
+      <!-- Viewer PDF -->
+      <iframe
+        id="pdf-viewer"
+        src="assets/kkn-2020.pdf"
+        width="100%"
+        height="520"
+        title="Peta Jalan Desa"
+      ></iframe>
+
+      <!-- Fallback link kalau browser HP tidak bisa render PDF di iframe -->
+      <p class="fallback">
+        Jika PDF tidak tampil, klik di sini:
+        <a href="assets/kkn-2020.pdf" target="_blank" rel="noopener">Buka Peta 2020</a>
+      </p>
+
+      <!-- Tombol Download -->
+      <p>
+        <a
+          id="download-btn"
+          href="assets/kkn-2020.pdf"
+          download="kkn-2020.pdf"
+          class="btn-download"
+        >⬇️ Download Peta 2020</a>
+      </p>
+    </section>
+
+    <p class="link-secondary">
+      <a href="tentang.html">Tentang Kami →</a>
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 | KKN 51 PPU 03 – Universitas Mulawarman
+  </footer>
+</body>
+</html>
