@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Perkembangan Jalan Desa</title>
+  <title>Peta NDVI Desa Tengin Baru</title>
   <link rel="stylesheet" href="style.css" />
   <!-- Favicon (ikon di tab) -->
   <link rel="icon" type="image/x-icon" href="assets/logo-kkn-ico.ico" />
@@ -44,13 +44,13 @@
     <section>
       <h2>Peta Jalan Desa</h2>
       <!-- Viewer PDF -->
-      <iframe
-        id="pdf-viewer"
-        src="assets/kkn-2020.pdf"
-        width="100%"
-        height="520"
-        title="Peta Jalan Desa"
-      ></iframe>
+    <iframe 
+      id="pdf-viewer"
+      src="https://docs.google.com/gview?embedded=true&url=https://smadhaf.github.io/assets/kkn-2020.pdf" 
+      width="100%" 
+      height="520"
+      style="border: none;">
+    </iframe>
 
       <!-- Fallback link kalau browser HP tidak bisa render PDF di iframe -->
       <p class="fallback">
@@ -79,3 +79,4 @@
   </footer>
 </body>
 </html>
+
