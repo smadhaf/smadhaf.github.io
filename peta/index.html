@@ -9,17 +9,22 @@
   <link rel="icon" type="image/x-icon" href="assets/logo-kkn-ico.ico" />
   <script>
     function loadMap() {
-      const tahun = document.getElementById("tahun").value;
-      const viewer = document.getElementById("pdf-viewer");
-      const downloadBtn = document.getElementById("download-btn");
+  const tahun = document.getElementById("tahun").value;
+  const viewer = document.getElementById("pdf-viewer");
+  const downloadBtn = document.getElementById("download-btn");
 
-  
-      const file = `assets/kkn-${tahun}.pdf`;
-      viewer.src = file;
-      downloadBtn.href = file;
-      downloadBtn.download = `kkn-${tahun}.pdf`;
-      downloadBtn.innerText = `⬇️ Download Peta ${tahun}`;
-    }
+  // URL absolut ke repo GitHub Pages
+  const file = `https://smadhaf.github.io/peta/assets/kkn-${tahun}.pdf`;
+
+  // Tampilkan di Google Docs Viewer
+  viewer.src = `https://docs.google.com/viewer?url=${file}&embedded=true`;
+
+  // Update tombol download
+  downloadBtn.href = file;
+  downloadBtn.download = `kkn-${tahun}.pdf`;
+  downloadBtn.innerText = `⬇️ Download Peta ${tahun}`;
+}
+
   </script>
 </head>
 <body>
@@ -81,4 +86,5 @@
   </footer>
 </body>
 </html>
+
 
