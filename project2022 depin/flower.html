@@ -9,8 +9,17 @@
     <title>flowers</title>
 </head>
 <body class="container">
-    <!-- 🎉 Selamat Ulang Tahun Section 🎉 -->
-<div id="birthday-container" style="text-align:center; margin-top:50px;">
+<!-- 🎉 Selamat Ulang Tahun Section 🎉 -->
+<div id="birthday-container" style="
+  text-align:center;
+  margin-top:50px;
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:9999;
+  width:100%;
+">
   <h1 style="
     font-size: 48px;
     color: #ff69b4;
@@ -21,6 +30,7 @@
   </h1>
   <p style="font-size: 20px; color: #555;">Semoga yang di semogakan segera tersemogakan, lop u kak💖</p>
 </div>
+
 
 <!-- Confetti Canvas -->
 <canvas id="confetti-canvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none;"></canvas>
