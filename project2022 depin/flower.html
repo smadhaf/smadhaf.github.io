@@ -377,5 +377,30 @@ setInterval(drawConfetti, 20);
       </div>
     </div>
     <script src="main.js"></script>
+    <!-- 🎉 Ucapan Ulang Tahun -->
+<div id="birthday-text" style="
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff66b2;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0 0 20px #ff99cc, 0 0 30px #ff66b2;
+  z-index: 9999;
+  text-align: center;
+  animation: fadeGlow 2s infinite alternate;
+">
+  🎂 Selamat Ulang Tahun! 🎉<br>
+  <span style="font-size:22px;">Semoga hari ini penuh bunga, kayak web-nya 🌸</span>
+</div>
+
+<style>
+@keyframes fadeGlow {
+  from {opacity: 0.6; text-shadow: 0 0 10px #ff99cc;}
+  to {opacity: 1; text-shadow: 0 0 30px #ff66b2;}
+}
+</style>
+    
   </body>
 </html>
